@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .import views
+from landing_pages import views as lp_views
 
 urlpatterns = [
-    path('', views.home_page),
+    path('', lp_views.home_page),
     path('admin/', admin.site.urls),
 ]

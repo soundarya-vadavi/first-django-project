@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Your First Django Project {% endblock %}</title>
+
+    {% include "Base/css.html"%}
+    
+  </head>
+  <body>
+    {% include 'Base/navbar.html' %}
+    <hr>
+
+    <div class="container-fluid">
+    {% block start %}
+    
+
+    {% endblock %}
+
+</div>
+    
+    {% include "Base/javascript.html"%}
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}-{{ block.super }}
+{% endblock %}
+
+{% block start %}
+<h1>{{ title }}</h1 >  
+
+ 
+
+<div class="d-flex justify-content-center">
+  <form class="mb-5" method="POST">{% csrf_token %}
+    
+    <div class="form-group text-center">
+      {{ form }}
+    </div>
+    <hr>
+    <div class="form-footer text-center">
+      <button type="submit">Send</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
